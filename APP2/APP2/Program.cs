@@ -10,6 +10,12 @@ namespace APP2
     {
         static void Main(string[] args)
         {
+            for (char c = 'c'; c <= 'z'; c++)
+            {
+                Console.WriteLine(c);
+            }
+            Console.Read();
+
         }
     }
 }
