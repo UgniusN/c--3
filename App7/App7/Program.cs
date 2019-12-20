@@ -10,17 +10,31 @@ namespace App7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Iveskite sakini: ");
-            String a = Console.ReadLine();
-            int ilgis = a.Length-1;
-            char b;
-            while (ilgis >= 0)
+            int a;
+            String b;
+            String pasirinkimas;
+            int skaicius;
+            for (; ; )
             {
-                b = a[ilgis];
-                ilgis--;
-                Console.WriteLine(b);
+                Console.WriteLine("Iveskite skaiciu: ");
+                b = Console.ReadLine();
+                a = Convert.ToInt32(b);
+                for (int j = 0; j<=a; j++)
+                {
+                    skaicius = j * a;
+                    Console.WriteLine();
+                    Console.Write("{0} ", skaicius);
+                }
+                Console.WriteLine("Testi (taip / ne)");
+                pasirinkimas = Console.ReadLine();
+                if (pasirinkimas == "ne")
+                    break;
+                else if (pasirinkimas == "taip")
+                    Console.WriteLine("Tesiama pagal prasyma");
+                else
+                    Console.WriteLine("Neteisingas pasirinkimas");
             }
-            Console.Read();
+            Console.ReadLine();
         }
     }
 }
