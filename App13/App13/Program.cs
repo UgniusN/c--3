@@ -13,6 +13,7 @@ namespace App13
             int[] skaiciai = new int[5];
             String a;
             int b;
+            int suma=0;
             for (int i=0; i<5; i++)
             {
                 Console.WriteLine("Iveskite skaiciu: ");
@@ -20,10 +21,11 @@ namespace App13
                 b = Convert.ToInt32(a);
                 skaiciai[i] = b;
             }
-            for (int i =4 ; i >= 0; i--)
+            for(int i=0; i<5; i++)
             {
-                Console.WriteLine(skaiciai[i]);
+                suma += skaiciai[i];
             }
+            Console.WriteLine(suma);
             Console.Read();
         }
     }
