@@ -10,6 +10,11 @@ namespace App1
     {
         static void Main(string[] args)
         {
+            for (int i = 10-1; i>=0; i--)
+            {
+                Console.WriteLine("i reiksme yra {0}", i);
+            }
+            Console.Read();
         }
     }
 }
